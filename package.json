@@ -7,9 +7,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/prop-types": "^15.7.4",
+    "@types/react-lottie": "^1.2.6",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-lottie": "^1.2.3",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
-import { BiMoon } from 'react-icons/bi'
 import { Container, NavMenu } from './styled'
+import { DarkModeButton } from '../DarkModeButton'
 
 export function Header() {
     return (
@@ -11,7 +11,7 @@ export function Header() {
                     <a href="#skills">Habilidades</a>
                     <a href="#portfolio">Portfólio</a>
                     <a href="#contact">Contato</a>
-                    <BiMoon size={20}/>               
+                    <DarkModeButton />
                 </NavMenu>
         </Container>
     )
