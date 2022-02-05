@@ -4,6 +4,10 @@ export const GlobalStyle = createGlobalStyle`
     :root {
         --background-light: #ecf0f1;
         --background-dark: #282a36;
+
+        --text-color-light: #ecf0f1;
+        --text-color-dark: #282a36;
+        --text-color-focus: #3498db;
     }
 
     * {
@@ -13,6 +17,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
+        scroll-behavior: scroll;
+
         @media (max-width: 1080px) {
             font-size: 93.75%;
         }
