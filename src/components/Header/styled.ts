@@ -10,7 +10,7 @@ export const Container = styled.header`
 
     a {
         text-decoration: none;
-        color: var(--text-color-dark);
+        color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
         font-weight: 600;
     }
 `

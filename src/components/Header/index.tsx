@@ -27,11 +27,11 @@ export function Header<Props>({toggleTheme}) {
                     checked={title === 'dark'}
                     checkedIcon={false}
                     uncheckedIcon={false}
-                    height={10}
+                    height={15}
                     width={40}
                     handleDiameter={20}
-                    offColor={'#c0392b'}
-                    onColor={'#f39c12'}
+                    offColor={'#011F3F'}
+                    onColor={'#429FFD'}
                 />
         </Container>
     )

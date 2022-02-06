@@ -1,5 +1,6 @@
 import { usePersistedState } from './utils/usePersistedState'
 import { Header } from './components/Header'
+import { Main } from './components/Main'
 import { GlobalStyle } from './styles/global'
 import { ThemeProvider } from 'styled-components'
 import light from './styles/themes/light'
@@ -16,6 +17,7 @@ export function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header toggleTheme={toggleTheme}/>
+      <Main />
     </ThemeProvider>
   )
 }
