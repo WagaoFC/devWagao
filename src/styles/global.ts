@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: var(--background-light);
+        background: ${props => props.theme.colors.background};
         -webkit-font-smoothing: antialiased;
     }
 
