@@ -21,18 +21,18 @@ export function Header<Props>({toggleTheme}) {
                     <a href="#portfolio">Portfólio</a>
                     <a href="#contact">Contato</a>
                     {/* <DarkModeButton onChange={toggleTheme}/> */}
+                    <Switch
+                        onChange={toggleTheme}
+                        checked={title === 'dark'}
+                        checkedIcon={false}
+                        uncheckedIcon={false}
+                        height={15}
+                        width={40}
+                        handleDiameter={20}
+                        offColor={'#011F3F'}
+                        onColor={'#429FFD'}
+                    />
                 </NavMenu>
-                <Switch
-                    onChange={toggleTheme}
-                    checked={title === 'dark'}
-                    checkedIcon={false}
-                    uncheckedIcon={false}
-                    height={15}
-                    width={40}
-                    handleDiameter={20}
-                    offColor={'#011F3F'}
-                    onColor={'#429FFD'}
-                />
         </Container>
     )
 }
