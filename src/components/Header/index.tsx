@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Container, NavMenu } from './styled'
+import { Container, HeaderMenu, NavMenu } from './styled'
 import { DarkModeButton } from '../DarkModeButton'
 import { ThemeContext } from 'styled-components'
 import Switch from 'react-switch'
@@ -13,9 +13,10 @@ export function Header<Props>({toggleTheme}) {
 
     return (
         <Container>
+            <HeaderMenu>
                 <a href="#">devWagao</a>
                 <NavMenu>
-                    <a href="#home">Início</a>
+                    <a href="#">Início</a>
                     <a href="#about">Sobre</a>
                     <a href="#skills">Habilidades</a>
                     <a href="#portfolio">Portfólio</a>
@@ -33,6 +34,7 @@ export function Header<Props>({toggleTheme}) {
                         onColor={'#429FFD'}
                     />
                 </NavMenu>
+            </HeaderMenu>
         </Container>
     )
 }

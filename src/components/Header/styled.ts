@@ -1,12 +1,23 @@
 import styled from 'styled-components'
 
-export const Container = styled.header`
-    max-width: 1500px;
-    margin: auto;
+export const Container = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    background: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
+`
+
+export const HeaderMenu = styled.header`
+    max-width: 1200px;
+    width: 100%;
     height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    background: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
 
     a {
         text-decoration: none;

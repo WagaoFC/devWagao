@@ -4,8 +4,8 @@ export const Container = styled.main`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1500px;
-    height: 80vh;
+    max-width: 1200px;
+    height: 90vh;
     margin: auto;
 `
 
@@ -42,4 +42,20 @@ export const Text = styled.div`
 
 export const MotionLottie = styled.div`
     margin: 0 0 0 auto;
+`
+
+export const Section = styled.section`
+    section {
+        color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+    }
+
+    svg {
+        margin: 0 0 0 5rem;
+    }
 `
