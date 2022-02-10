@@ -42,6 +42,10 @@ export const Text = styled.div`
 
 export const MotionLottie = styled.div`
     margin: 0 0 0 auto;
+
+    @media (max-width: 1200px) {
+        content-visibility: hidden;
+    }
 `
 
 export const Section = styled.section`
