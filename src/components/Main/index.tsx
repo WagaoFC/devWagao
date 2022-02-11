@@ -10,7 +10,7 @@ export function Main() {
     const defaultOptions = {
         loop: true,
         autoplay: true,
-        animationData: animation, animationConstruction,
+        animationData: animation,
     }
 
     const defaultOptionsConstruction = {

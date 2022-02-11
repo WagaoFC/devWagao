@@ -19,6 +19,20 @@ export const GlobalStyle = createGlobalStyle`
     html {
         scroll-behavior: smooth;
 
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: ${props => props.theme.colors.background};
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
+            border-radius: 1rem;
+            border: .2rem solid ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
+        }
+
         @media (max-width: 1080px) {
             font-size: 93.75%;
         }
