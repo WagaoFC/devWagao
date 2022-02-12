@@ -1,7 +1,6 @@
 {
   "name": "devwagao",
   "version": "0.0.0",
-  "homepage": "http://devwagao.com",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
