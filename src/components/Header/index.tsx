@@ -4,11 +4,11 @@ import { DarkModeButton } from '../DarkModeButton'
 import { ThemeContext } from 'styled-components'
 import Switch from 'react-switch'
 
-interface Props {
-    toggleTheme(): void
+type Props = {
+    toggleTheme: () => void
 }
 
-export function Header<Props>({toggleTheme}) {
+export function Header({ toggleTheme }: Props) {
     const { title } = useContext(ThemeContext)
 
     return (
