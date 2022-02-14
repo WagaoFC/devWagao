@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Container, HeaderMenu, NavMenu } from './styled'
 import { DarkModeButton } from '../DarkModeButton'
 import { ThemeContext } from 'styled-components'
-import Switch from 'react-switch'
+// import Switch from 'react-switch'
 
 type Props = {
     toggleTheme: () => void
@@ -22,7 +22,7 @@ export function Header({ toggleTheme }: Props) {
                     <a href="#portfolio">Portfólio</a>
                     <a href="#contact">Contato</a>
                     {/* <DarkModeButton onChange={toggleTheme}/> */}
-                    <Switch
+                    {/* <Switch
                         onChange={toggleTheme}
                         checked={title === 'dark'}
                         checkedIcon={false}
@@ -32,7 +32,7 @@ export function Header({ toggleTheme }: Props) {
                         handleDiameter={20}
                         offColor={'#011F3F'}
                         onColor={'#429FFD'}
-                    />
+                    /> */}
                 </NavMenu>
             </HeaderMenu>
         </Container>
