@@ -1,7 +1,8 @@
 import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { Container, HeaderMenu, NavMenu } from './styled'
 import { DarkModeButton } from '../DarkModeButton'
-import { ThemeContext } from 'styled-components'
 // import Switch from 'react-switch'
 
 type Props = {
@@ -33,6 +34,7 @@ export function Header({ toggleTheme }: Props) {
                         offColor={'#011F3F'}
                         onColor={'#429FFD'}
                     /> */}
+                    <GiHamburgerMenu size={20} />
                 </NavMenu>
             </HeaderMenu>
         </Container>

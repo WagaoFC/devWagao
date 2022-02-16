@@ -7,6 +7,10 @@ export const Container = styled.main`
     max-width: 1200px;
     height: 90vh;
     margin: auto;
+
+    @media (max-width: 900px) {
+        width: 70%;
+    }
 `
 
 export const Icons = styled.div`
@@ -41,9 +45,8 @@ export const Text = styled.div`
 `
 
 export const MotionLottie = styled.div`
-    margin: 0 0 0 auto;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 900px) {
         content-visibility: hidden;
     }
 `
