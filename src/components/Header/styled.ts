@@ -8,6 +8,7 @@ export const Container = styled.div`
     background: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
 
     @media (max-width: 900px) {
+        width: 70vh;
         margin: auto;
     }
 `
