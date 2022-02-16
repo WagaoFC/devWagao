@@ -6,11 +6,6 @@ export const Container = styled.div`
     justify-content: center;
     height: 8vh;
     background: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
-
-    @media (max-width: 900px) {
-        width: 70vh;
-        margin: auto;
-    }
 `
 
 export const HeaderMenu = styled.header`
@@ -28,10 +23,6 @@ export const HeaderMenu = styled.header`
         text-decoration: none;
         color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
         font-weight: 600;
-    }
-
-    @media (max-width: 900px) {
-        width: 70%;
     }
 `
 
@@ -60,10 +51,6 @@ export const NavMenu = styled.div`
             &:after {
                 width: 100%;
             }
-        }
-
-        @media (max-width: 900px) {
-            display: none;
         }
     }
 

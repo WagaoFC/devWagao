@@ -7,10 +7,6 @@ export const Container = styled.main`
     max-width: 1200px;
     height: 90vh;
     margin: auto;
-
-    @media (max-width: 900px) {
-        width: 67vh;
-    }
 `
 
 export const Icons = styled.div`
@@ -27,10 +23,6 @@ export const Icons = styled.div`
             color: var(--text-color-focus);
         }
     }
-
-    @media (max-width: 900px) {
-        margin: auto;
-    }
 `
 
 export const Text = styled.div`
@@ -45,10 +37,6 @@ export const Text = styled.div`
     a {
         text-decoration: none;
         color: var(--text-color-focus);
-    }
-
-    @media (max-width: 900px) {
-        margin: auto;
     }
 `
 
