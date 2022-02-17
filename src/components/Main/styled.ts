@@ -5,6 +5,7 @@ export const Container = styled.main`
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
+    width: 90%;
     height: 90vh;
     margin: auto;
 `
@@ -29,6 +30,7 @@ export const Text = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
 
     h1, h2, h3 {
         color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
@@ -41,8 +43,9 @@ export const Text = styled.div`
 `
 
 export const MotionLottie = styled.div`
+    width: 44%;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
         content-visibility: hidden;
     }
 `

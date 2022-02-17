@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const HeaderMenu = styled.header`
     max-width: 1200px;
-    width: 100%;
+    width: 90%;
     height: 8vh;
     display: flex;
     align-items: center;
