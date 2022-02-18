@@ -52,6 +52,10 @@ export const NavMenu = styled.div`
                 width: 100%;
             }
         }
+
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
 
     svg {
