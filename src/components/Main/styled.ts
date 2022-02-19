@@ -40,13 +40,17 @@ export const Text = styled.div`
         text-decoration: none;
         color: var(--text-color-focus);
     }
+
+    @media (max-width: 1024px) {
+        text-align: left;
+    }
 `
 
 export const MotionLottie = styled.div`
     width: 44%;
 
     @media (max-width: 1024px) {
-        content-visibility: hidden;
+        display: none;
     }
 `
 
@@ -63,5 +67,9 @@ export const Section = styled.section`
 
     svg {
         margin: 0 0 0 5rem;
+
+        @media (max-width: 700px) {
+            margin: 0;
+        }
     }
 `
