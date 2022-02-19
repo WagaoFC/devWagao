@@ -6,8 +6,8 @@ export const Container = styled.button`
     padding: .5rem;
     border: none;
     border-radius: 40%;
-    color: var(--background-light);
-    background: var(--background-dark);
+    color: var(--background-dark);
+    background: var(--background-light);
 
     &:hover {
         color: var(--text-color-focus);

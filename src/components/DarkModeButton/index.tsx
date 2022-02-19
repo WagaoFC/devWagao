@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Container } from './styled'
 import { BiMoon } from 'react-icons/bi'
-import { BsSun } from 'react-icons/bs'
+import { BsFillSunFill } from 'react-icons/bs'
 
 export function DarkModeButton() {
     const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -16,7 +16,7 @@ export function DarkModeButton() {
 
     return(
         <Container onClick={alterMode}>
-            {!darkMode ? <BsSun size={20} /> : <BiMoon size={20} />}
+            {!darkMode ? <BiMoon size={20} /> : <BsFillSunFill size={20} />}
         </Container>
     )
 }

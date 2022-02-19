@@ -22,7 +22,7 @@ export function Header({ toggleTheme }: Props) {
                     <a href="#skills">Habilidades</a>
                     <a href="#portfolio">Portfólio</a>
                     <a href="#contact">Contato</a>
-                    {/* <DarkModeButton onChange={toggleTheme}/> */}
+                    <DarkModeButton/>
                     {/* <Switch
                         onChange={toggleTheme}
                         checked={title === 'dark'}
@@ -34,7 +34,7 @@ export function Header({ toggleTheme }: Props) {
                         offColor={'#011F3F'}
                         onColor={'#429FFD'}
                     /> */}
-                    <GiHamburgerMenu size={20} />
+                    <GiHamburgerMenu className='hamburgerMenu' size={20} />
                 </NavMenu>
             </HeaderMenu>
         </Container>

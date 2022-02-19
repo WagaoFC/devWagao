@@ -58,7 +58,7 @@ export const NavMenu = styled.div`
         }
     }
 
-    svg {
+    .hamburgerMenu {
         display: none;
 
         @media (max-width: 900px) {
