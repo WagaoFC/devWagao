@@ -8,6 +8,10 @@ export const Container = styled.main`
     width: 90%;
     height: 90vh;
     margin: auto;
+
+    @media (max-width: 1024px) {
+        gap: 1rem;
+    }
 `
 
 export const Icons = styled.div`
@@ -39,10 +43,6 @@ export const Text = styled.div`
     a {
         text-decoration: none;
         color: var(--text-color-focus);
-    }
-
-    @media (max-width: 1024px) {
-        text-align: left;
     }
 `
 
