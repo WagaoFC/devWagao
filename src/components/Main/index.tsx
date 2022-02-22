@@ -46,29 +46,29 @@ export function Main() {
                 <section id="about">Estou trabalhando aqui 😅
                     <Lottie
                         options={defaultOptionsConstruction}
-                        height={400}
-                        width={400}
+                        height={600}
+                        width={600}
                     />
                 </section>
                 <section id="skills">Estou trabalhando aqui 😅
                     <Lottie
                         options={defaultOptionsConstruction}
-                        height={400}
-                        width={400}
+                        height={600}
+                        width={600}
                     />
                 </section>
                 <section id="portfolio">Estou trabalhando aqui 😅
                     <Lottie
                         options={defaultOptionsConstruction}
-                        height={400}
-                        width={400}
+                        height={600}
+                        width={600}
                     />
                 </section>
                 <section id="contact">Estou trabalhando aqui 😅
                     <Lottie
                         options={defaultOptionsConstruction}
-                        height={400}
-                        width={400}
+                        height={600}
+                        width={600}
                     />
                 </section>
             </Section>

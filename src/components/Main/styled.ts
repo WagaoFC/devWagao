@@ -34,7 +34,7 @@ export const Text = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    text-align: center;
+    text-align: left;
 
     h1, h2, h3 {
         color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
@@ -69,7 +69,7 @@ export const Section = styled.section`
         margin: 0 0 0 5rem;
 
         @media (max-width: 700px) {
-            margin: 0;
+            display: none;
         }
     }
 `
