@@ -12,6 +12,11 @@ export const Container = styled.main`
     @media (max-width: 1024px) {
         gap: 1rem;
     }
+
+    @media (max-width: 500px) {
+        width: 600px;
+        margin-left: 0.5rem;
+    }
 `
 
 export const Icons = styled.div`

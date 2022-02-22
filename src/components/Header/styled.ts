@@ -6,6 +6,11 @@ export const Container = styled.div`
     justify-content: center;
     height: 8vh;
     background: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
+
+    @media (max-width: 900px) {
+        justify-content: space-between;
+        margin: 0 1rem 0 1rem;
+    }
 `
 
 export const HeaderMenu = styled.header`
