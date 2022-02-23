@@ -1,8 +1,9 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { ThemeContext } from 'styled-components'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Container, HeaderMenu, NavMenu } from './styled'
 import { DarkModeButton } from '../DarkModeButton'
+import { MenuMobile } from '../MenuMobile'
 // import Switch from 'react-switch'
 
 type Props = {
@@ -11,9 +12,14 @@ type Props = {
 
 export function Header({ toggleTheme }: Props) {
     const { title } = useContext(ThemeContext)
+    const [menuIsVisible, setMenuIsVisible] = useState(true)
 
     return (
         <Container>
+            {/* <MenuMobile 
+                menuIsVisible={menuIsVisible}
+                setMenuIsVisible={setMenuIsVisible}
+            /> */}
             <HeaderMenu>
                 <a href="#">devWagao</a>
                 <NavMenu>
