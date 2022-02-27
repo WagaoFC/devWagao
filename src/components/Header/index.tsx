@@ -28,7 +28,7 @@ export function Header({ toggleTheme }: Props) {
                     <a href="#skills">Habilidades</a>
                     <a href="#portfolio">Portfólio</a>
                     <a href="#contact">Contato</a>
-                    <DarkModeButton/>
+                    <DarkModeButton />
                     {/* <Switch
                         onChange={toggleTheme}
                         checked={title === 'dark'}
