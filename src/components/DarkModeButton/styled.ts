@@ -6,8 +6,8 @@ export const Container = styled.button`
     padding: .5rem;
     border: none;
     border-radius: 40%;
-    color: var(--background-dark);
-    background: var(--background-light);
+    background: none;
+    color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
 
     &:hover {
         color: var(--text-color-focus);
