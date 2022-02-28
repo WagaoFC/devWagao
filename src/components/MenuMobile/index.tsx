@@ -8,7 +8,8 @@ type Props = {
 
 export function MenuMobile({menuIsVisible, setMenuIsVisible}: Props) {
     return (
-        <Container isVisible={menuIsVisible}>
+        <Container>
+        {/* <Container isVisible={menuIsVisible}> */}
             <IoClose size={45} onClick={() => setMenuIsVisible(false)}/>
             <nav>
                 <a href="#">Início</a>
