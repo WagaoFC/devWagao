@@ -4,13 +4,13 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { Container, HeaderMenu, NavMenu } from './styled'
 import { DarkModeButton } from '../DarkModeButton'
 import { MenuMobile } from '../MenuMobile'
-// import Switch from 'react-switch'
+import Switch from 'react-switch'
 
-type Props = {
+type DarkModeProps = {
     toggleTheme: () => void
 }
 
-export function Header({ toggleTheme }: Props) {
+export function Header(props: DarkModeProps) {
     const { title } = useContext(ThemeContext)
     const [menuIsVisible, setMenuIsVisible] = useState(true)
 
@@ -28,9 +28,9 @@ export function Header({ toggleTheme }: Props) {
                     <a href="#skills">Habilidades</a>
                     <a href="#portfolio">Portfólio</a>
                     <a href="#contact">Contato</a>
-                    <DarkModeButton />
-                    {/* <Switch
-                        onChange={toggleTheme}
+                    <DarkModeButton active={props.toggleTheme} checked={title === 'dark'}/>
+                    <Switch
+                        onChange={props.toggleTheme}
                         checked={title === 'dark'}
                         checkedIcon={false}
                         uncheckedIcon={false}
@@ -39,7 +39,7 @@ export function Header({ toggleTheme }: Props) {
                         handleDiameter={20}
                         offColor={'#011F3F'}
                         onColor={'#429FFD'}
-                    /> */}
+                    />
                     <GiHamburgerMenu className='hamburgerMenu' size={20} />
                 </NavMenu>
             </HeaderMenu>

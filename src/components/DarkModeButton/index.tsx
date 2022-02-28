@@ -3,7 +3,12 @@ import { Container } from './styled'
 import { BiMoon } from 'react-icons/bi'
 import { BsFillSunFill } from 'react-icons/bs'
 
-export function DarkModeButton() {
+type DarkModeProps = {
+    active: () => void;
+    checked: boolean;
+}
+
+export function DarkModeButton(props: DarkModeProps) {
     const [darkMode, setDarkMode] = useState<boolean>(false);
 
     function alterMode() {
