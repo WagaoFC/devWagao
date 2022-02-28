@@ -15,11 +15,9 @@ export function DarkModeButton(props: DarkModeProps) {
         if (!darkMode) {
             setDarkMode(true)
             props.onChange()
-            console.log('1')
         } else {
             setDarkMode(false)
             props.onChange()
-            console.log('2')
         }
     }
 
