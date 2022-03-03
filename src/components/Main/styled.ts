@@ -77,4 +77,12 @@ export const Section = styled.section`
             display: none;
         }
     }
+
+    @media (max-width: 700px) {
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 65vh;
+    }
 `
