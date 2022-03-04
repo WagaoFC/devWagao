@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Container, HeaderMenu, NavMenu } from './styled'
 import { DarkModeButton } from '../DarkModeButton'
@@ -20,7 +20,10 @@ export function Header(props: DarkModeProps) {
                     <a href="#skills">Habilidades</a>
                     <a href="#portfolio">Portfólio</a>
                     <a href="#contact">Contato</a>
-                    <DarkModeButton onChange={props.toggleTheme} checked={title === 'dark'}/>
+                    <DarkModeButton
+                        onChange={props.toggleTheme}
+                        checked={title === 'dark'}
+                    />
                 </NavMenu>
             </HeaderMenu>
         </Container>
