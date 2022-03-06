@@ -71,6 +71,9 @@ export function Main() {
                         width={600}
                     />
                 </section>
+                <footer>
+                    <p>Desenvolvido com muito 💖 por Wagner Ferreira Costa</p>
+                </footer>
             </Section>
         </>
     )

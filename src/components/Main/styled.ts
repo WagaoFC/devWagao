@@ -85,4 +85,10 @@ export const Section = styled.section`
         align-items: center;
         width: 65vh;
     }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
 `
