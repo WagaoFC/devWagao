@@ -88,7 +88,17 @@ export const Section = styled.section`
 
     footer {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
+
+        p {
+            color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
+        }
+
+        hr {
+            width: 100%;
+        }
     }
 `

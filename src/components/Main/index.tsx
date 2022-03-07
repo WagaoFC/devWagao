@@ -5,6 +5,7 @@ import Typist from 'react-typist'
 import animation from './animation.json'
 import animationConstruction from './animationConstruction.json'
 import { Container, Icons, Text, MotionLottie, Section } from './styled'
+import { ScrollTop } from '../ScrollTop'
 
 export function Main() {
     const defaultOptions = {
@@ -50,6 +51,7 @@ export function Main() {
                         width={600}
                     />
                 </section>
+                <ScrollTop />
                 <section id="skills">Estou trabalhando aqui 😅
                     <Lottie
                         options={defaultOptionsConstruction}
@@ -72,6 +74,7 @@ export function Main() {
                     />
                 </section>
                 <footer>
+                    <hr/>
                     <p>Desenvolvido com muito 💖 por Wagner Ferreira Costa</p>
                 </footer>
             </Section>
