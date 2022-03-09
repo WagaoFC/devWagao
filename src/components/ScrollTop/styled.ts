@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    display: none;
+
+    @media (max-width: 900px) {
+        display: flex;
+    }
+
     a {
         position: fixed;
         bottom: 20px;
