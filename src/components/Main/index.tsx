@@ -50,14 +50,15 @@ export function Main() {
                         height={600}
                         width={600}
                     />
+                    <ScrollTop />
                 </section>
-                <ScrollTop />
                 <section id="skills">Estou trabalhando aqui 😅
                     <Lottie
                         options={defaultOptionsConstruction}
                         height={600}
                         width={600}
                     />
+                    <ScrollTop />
                 </section>
                 <section id="portfolio">Estou trabalhando aqui 😅
                     <Lottie
@@ -65,6 +66,7 @@ export function Main() {
                         height={600}
                         width={600}
                     />
+                    <ScrollTop />
                 </section>
                 <section id="contact">Estou trabalhando aqui 😅
                     <Lottie
@@ -72,6 +74,7 @@ export function Main() {
                         height={600}
                         width={600}
                     />
+                    <ScrollTop />
                 </section>
                 <footer>
                     <hr/>
