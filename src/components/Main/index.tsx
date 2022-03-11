@@ -50,7 +50,6 @@ export function Main() {
                         height={600}
                         width={600}
                     />
-                    <ScrollTop />
                 </section>
                 <section id="skills">Estou trabalhando aqui 😅
                     <Lottie
@@ -58,7 +57,6 @@ export function Main() {
                         height={600}
                         width={600}
                     />
-                    <ScrollTop />
                 </section>
                 <section id="portfolio">Estou trabalhando aqui 😅
                     <Lottie
@@ -66,7 +64,6 @@ export function Main() {
                         height={600}
                         width={600}
                     />
-                    <ScrollTop />
                 </section>
                 <section id="contact">Estou trabalhando aqui 😅
                     <Lottie
@@ -74,13 +71,13 @@ export function Main() {
                         height={600}
                         width={600}
                     />
-                    <ScrollTop />
                 </section>
                 <footer>
                     <hr/>
                     <p>Desenvolvido com muito 💖 por Wagner Ferreira Costa</p>
                 </footer>
             </Section>
+            <ScrollTop />
         </>
     )
 }
