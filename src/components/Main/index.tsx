@@ -6,6 +6,7 @@ import animation from './animation.json'
 import animationConstruction from './animationConstruction.json'
 import { Container, Icons, Text, MotionLottie, Section } from './styled'
 import { ScrollTop } from '../ScrollTop'
+import { About } from '../About'
 
 export function Main() {
     const defaultOptions = {
@@ -44,12 +45,8 @@ export function Main() {
                 </MotionLottie>
             </Container>
             <Section>
-                <section id="about">Estou trabalhando aqui 😅
-                    <Lottie
-                        options={defaultOptionsConstruction}
-                        height={600}
-                        width={600}
-                    />
+                <section id="about">
+                   <About />
                 </section>
                 <section id="skills">Estou trabalhando aqui 😅
                     <Lottie
