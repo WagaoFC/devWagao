@@ -5,7 +5,6 @@ import { Container, Text } from './styled'
 export function About() {
     return (
         <Container>
-            {/* <img src={wagaoRelax} alt="Foto de Wagner" /> */}
             <img src={wagaoSerious} alt="Foto de Wagner" />
             <Text>
                 <h1>Sobre mim</h1>
