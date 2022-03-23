@@ -23,7 +23,7 @@ export const Icons = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin: auto auto auto 0;    
+    margin: auto auto auto 0;
 
     a {
         text-decoration: none;
@@ -62,12 +62,13 @@ export const MotionLottie = styled.div`
 export const Section = styled.section`
     section {
         color: ${props => props.theme.title === 'light' ? 'var(--text-color-dark)' : 'var(--text-color-light)'};
+        max-width: 1200px;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 5rem;
+        margin: auto;
     }
 
     svg {
