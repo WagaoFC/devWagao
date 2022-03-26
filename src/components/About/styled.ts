@@ -25,11 +25,16 @@ export const Text = styled.div`
     justify-content: center;
     align-items: center;
 
-    .Align {
+    .Tech {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color-focus);
     }
 
     svg {

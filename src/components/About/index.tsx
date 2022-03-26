@@ -12,11 +12,13 @@ export function About() {
                 <p>Junior Software Developer, com 10 meses de experiência</p>
                 <p>Atualmente estou aprendendo muito sobre desenvolvimento web</p>
                 <p>Dentre as tecnologias que uso atualmente gosto de destacar</p>
-                <p className='Align'>
+                <p className='Tech'>
                     ReactJS <FaReact />,
                     Node.js <FaNodeJs /> e
                     Git <FaGitAlt /></p>
                 <p>Focado em realizar entregas de qualidade que possam agregar valor ao negócio</p>
+                <br />
+                <p>Para saber mais acesse meu perfil no <a href="https://www.linkedin.com/in/wagnerferreiracosta/" target="_blank">Linkedin</a></p>
             </Text>
             <img src={wagaoSerious} alt="Foto de Wagner" />
         </ Container>
