@@ -3,14 +3,13 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     z-index: 1;
-    gap: 10rem;
     
     img {
         width: 20%;
-        border-radius: 0px 40px 0px 40px;
+        border-radius: 40px 0 40px 0;
         box-shadow: 5px 5px 33px 5px var(--text-color-focus);
         transition: transform 1s;
 
@@ -21,8 +20,21 @@ export const Container = styled.div`
 `
 
 export const Text = styled.div`
-    width: 100%;
+    width: 45%;
     text-align: center;
     justify-content: center;
     align-items: center;
+
+    .Align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    svg {
+        margin: 0;
+        color: var(--text-color-focus);
+        font-size: 25px;
+    }
 `
