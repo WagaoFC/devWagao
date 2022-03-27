@@ -18,7 +18,7 @@ export function About() {
                     Git <FaGitAlt /></p>
                 <p>Focado em realizar entregas de qualidade que possam agregar valor ao negócio</p>
                 <br />
-                <p>Para saber mais acesse meu perfil no <a href="https://www.linkedin.com/in/wagnerferreiracosta/" target="_blank">Linkedin</a></p>
+                <p>Para saber mais acesse meu perfil no <strong><a href="https://www.linkedin.com/in/wagnerferreiracosta/" target="_blank">Linkedin</a></strong></p>
             </Text>
             <img src={wagaoSerious} alt="Foto de Wagner" />
         </ Container>
