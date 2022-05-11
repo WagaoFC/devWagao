@@ -9,7 +9,7 @@ export function About() {
             <Text>
                 <h1>Um pouco sobre mim</h1>
                 <br />
-                <p>Junior Software Developer, com 10 meses de experiência</p>
+                <p>Software Developer, com 1 ano de experiência</p>
                 <p>Atualmente estou aprendendo muito sobre desenvolvimento web</p>
                 <p>Dentre as tecnologias que uso atualmente gosto de destacar</p>
                 <p className='Tech'>
