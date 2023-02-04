@@ -5,12 +5,11 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    z-index: 1;
     
     img {
         width: 20%;
         border-radius: 40px 0 40px 0;
-        box-shadow: 5px 5px 33px 5px var(--text-color-focus);
+        box-shadow: 3px 3px var(--text-color-focus);
         transition: transform 1s;
 
         &:hover {
@@ -35,6 +34,10 @@ export const Text = styled.div`
     a {
         text-decoration: none;
         color: var(--text-color-focus);
+    }
+
+    p, li {
+        text-align: left;
     }
 
     svg {
