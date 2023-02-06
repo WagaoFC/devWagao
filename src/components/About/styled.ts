@@ -26,9 +26,10 @@ export const Text = styled.div`
 
     .Tech {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 5px;
+        line-height: 2rem;
     }
 
     a {

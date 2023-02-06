@@ -12,11 +12,15 @@ export function About() {
                 <ul>
                     <li>Software Developer com pouco mais de 1 ano de experiência</li>
                     <li>Atualmente estou aprendendo muito sobre desenvolvimento web</li>
-                    <li>Dentre as tecnologias que uso atualmente gosto de destacar</li>
+                    <li>Dentre as tecnologias que uso atualmente gosto de destacar:</li>
                     <p className='Tech'>
-                    ReactJS <FaReact />,
-                    Node.js <FaNodeJs /> e
-                    Git <FaGitAlt />
+                        <FaReact /> ReactJS
+                    </p>
+                    <p className='Tech'>
+                        <FaNodeJs /> Node.js
+                    </p>
+                    <p className='Tech'>
+                        <FaGitAlt /> Git
                     </p>
                     <li>Cursando Engenharia de Software</li>
                     <li>Focado em realizar entregas de qualidade que possam agregar valor ao negócio</li>
