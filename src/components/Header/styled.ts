@@ -23,6 +23,10 @@ export const HeaderMenu = styled.header`
     position: fixed;
     z-index: 1;
     background: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
+    
+    -webkit-box-shadow: 0px 30px 30px 10px ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
+    -moz-box-shadow: 0px 30px 30px 10px ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
+    box-shadow: 0px 30px 30px 10px ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
 
     a {
         text-decoration: none;
