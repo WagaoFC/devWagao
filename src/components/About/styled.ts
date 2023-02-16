@@ -41,6 +41,12 @@ export const Text = styled.div`
         text-align: left;
     }
 
+    span {
+        display: flex;
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+
     svg {
         margin: 0;
         color: var(--text-color-focus);
