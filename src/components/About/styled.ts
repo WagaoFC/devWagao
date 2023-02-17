@@ -24,32 +24,14 @@ export const Text = styled.div`
     justify-content: center;
     align-items: center;
 
-    .Tech {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 5px;
-        line-height: 2rem;
-    }
-
     a {
         text-decoration: none;
         color: var(--text-color-focus);
-    }
-
-    p, li {
-        text-align: left;
     }
 
     span {
         display: flex;
         text-align: justify;
         margin-bottom: 1rem;
-    }
-
-    svg {
-        margin: 0;
-        color: var(--text-color-focus);
-        font-size: 25px;
     }
 `
