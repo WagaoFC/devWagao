@@ -14,7 +14,7 @@ export function About() {
                 </span>
                 <span>
                     Além disso, gosto de fazer churrasco com a família e amigos, jogar
-                    video games, viajar, assistir séries e filmes nas horas vagas.
+                    video games e futebol, viajar, assistir séries e filmes nas horas vagas.
                 </span> 
                 <span>
                     Trabalho muito bem em equipe e tenho boa comunicação, sempre procurando
