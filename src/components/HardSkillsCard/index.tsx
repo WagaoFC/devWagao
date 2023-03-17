@@ -14,9 +14,8 @@ import {
 } from 'react-icons/si'
 import { Cards, Container } from "./styled";
 
-export function SkillsCard() {
+export function HardSkillsCard() {
     return (
-        <>
             <Container>
                 <Cards>
                     <SiHtml5 />
@@ -55,6 +54,5 @@ export function SkillsCard() {
                     <SiVisualstudiocode />
                 </Cards>
             </Container>
-        </>
     )
 }

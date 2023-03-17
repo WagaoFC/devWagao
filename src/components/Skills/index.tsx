@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { FaTools } from 'react-icons/fa'
 import { MdEmojiPeople } from 'react-icons/md'
-import { SkillsCard } from '../SkillsCard'
+import { HardSkillsCard } from '../HardSkillsCard'
+import { SoftSkillsCard } from '../SoftSkillsCard'
 import { Container } from './styled'
 
 export function Skills() {
@@ -21,8 +22,8 @@ export function Skills() {
             </ Container>
             {
                 changeSkill === 'soft' ?
-                    'soft' :
-                <SkillsCard />
+                <SoftSkillsCard /> :
+                <HardSkillsCard />
             }
         </>
     )
