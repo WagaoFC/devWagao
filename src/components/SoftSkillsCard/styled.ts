@@ -7,6 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     flex-direction: row;
     column-gap: 2rem;
+    height: 324px;
 `
 
 export const Cards = styled.div`
