@@ -28,7 +28,7 @@ export function About() {
                 <span>Para saber mais acesse meu perfil no&nbsp;
                     <strong>
                         <a href="https://www.linkedin.com/in/wagnerferreiracosta/" target="_blank">Linkedin</a>
-                    </strong>
+                    </strong>.
                 </span>
             </Text>
             <img src={wagaoSerious} alt="Foto de Wagner" />

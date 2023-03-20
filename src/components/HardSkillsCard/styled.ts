@@ -2,11 +2,16 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
     justify-content: center;
     flex-direction: row;
     column-gap: 2rem;
+    
+    .customTooltip {
+        color: ${props => props.theme.title === 'light' ? 'var(--text-color-light)' : 'var(--text-color-dark)'};
+        background-color: ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
+    }
 `
 
 export const Cards = styled.div`
