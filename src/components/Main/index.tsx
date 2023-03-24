@@ -8,6 +8,7 @@ import { Container, Icons, Text, MotionLottie, Section } from './styled'
 import { ScrollTop } from '../ScrollTop'
 import { About } from '../About'
 import { Skills } from '../Skills'
+import { Contact } from '../Contact'
 
 export function Main() {
     const defaultOptions = {
@@ -59,12 +60,8 @@ export function Main() {
                         width={600}
                     />
                 </section>
-                <section id="contact">Estou trabalhando aqui 😅
-                    <Lottie
-                        options={defaultOptionsConstruction}
-                        height={600}
-                        width={600}
-                    />
+                <section id="contact">
+                    <Contact />
                 </section>
                 <footer>
                     <hr/>
