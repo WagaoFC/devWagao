@@ -15,6 +15,7 @@ export function Contact() {
               placeholder="Informe seu nome"
               autoComplete="off"
               {...register('name')}
+              disabled
             />
           </label>
 
@@ -22,9 +23,10 @@ export function Contact() {
             Assunto
             <input
               type="text"
-              placeholder="Informe seu nome"
+              placeholder="Informe o assunto"
               autoComplete="off"
-              {...register('name')}
+              {...register('subject')}
+              disabled
             />
           </label>
 
@@ -32,9 +34,10 @@ export function Contact() {
             Mensagem
             <input
               type="text"
-              placeholder="Informe seu nome"
+              placeholder="Digite sua mensage"
               autoComplete="off"
-              {...register('name')}
+              {...register('message')}
+              disabled
             />
           </label>
         </Container>
