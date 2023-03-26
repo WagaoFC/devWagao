@@ -5,4 +5,9 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+
+    label {
+        display: flex;
+        flex-direction: column;
+    }
 `
