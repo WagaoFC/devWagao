@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Container } from "./styled";
+import { BiMailSend } from 'react-icons/bi';
 
 export function Contact() {
     const { register } = useForm()
@@ -15,7 +16,16 @@ export function Contact() {
               placeholder="Informe seu nome"
               autoComplete="off"
               {...register('name')}
-              disabled
+            />
+          </label>
+
+          <label>
+            E-mail
+            <input
+              type="text"
+              placeholder="Informe seu e-mail"
+              autoComplete="off"
+              {...register('email')}
             />
           </label>
 
@@ -26,20 +36,22 @@ export function Contact() {
               placeholder="Informe o assunto"
               autoComplete="off"
               {...register('subject')}
-              disabled
             />
           </label>
 
           <label>
             Mensagem
-            <input
-              type="text"
+            <textarea
               placeholder="Digite sua mensage"
               autoComplete="off"
               {...register('message')}
-              disabled
             />
           </label>
+
+          <button type='submit'>
+            <BiMailSend size="25" />
+            Enviar
+          </button>
         </Container>
     )
 }
