@@ -4,8 +4,28 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Container } from "./styled";
 import { BiMailSend } from 'react-icons/bi';
 
+const contactFormSchema = z.object({
+  name: z
+    .string()
+    .max(50, { message: 'Informe seu nome.' })
+    .regex(/^[a-zA-ZÀ-ÿ]+$/, {message: 'O nome deve ter somente letras.',}),
+  email: z
+    .string()
+    .email({ message: 'Por favor, insira um e-mail válido.' }),
+  subject: z
+    .string()
+    .max(50, { message: 'Informe o assunto.' }),
+  message: z
+    .string()
+    .max(200, { message: 'Informe sua mensagem.' })
+})
+
+type ContactFormData = z.infer<typeof contactFormSchema>
+
 export function Contact() {
-    const { register } = useForm()
+    const { register } = useForm<ContactFormData>({
+      resolver: zodResolver(contactFormSchema),
+    })
 
     return (
         <Container>
