@@ -7,6 +7,7 @@ import { BiMailSend } from 'react-icons/bi';
 const contactFormSchema = z.object({
   name: z
     .string()
+    .min(2, { message: 'Informe seu nome.' })
     .max(50, { message: 'Informe seu nome.' })
     .regex(/^[a-zA-ZÀ-ÿ]+$/, {message: 'O nome deve ter somente letras.',}),
   email: z
@@ -14,9 +15,11 @@ const contactFormSchema = z.object({
     .email({ message: 'Por favor, insira um e-mail válido.' }),
   subject: z
     .string()
+    .min(5, { message: 'Informe o assunto.' })
     .max(50, { message: 'Informe o assunto.' }),
   message: z
     .string()
+    .min(10, { message: 'Informe sua mensagem.' })
     .max(200, { message: 'Informe sua mensagem.' })
 })
 
