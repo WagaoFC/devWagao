@@ -7,6 +7,7 @@ import { BiMailSend } from 'react-icons/bi';
 const contactFormSchema = z.object({
   name: z
     .string()
+    .min(2, { message: 'Informe seu nome.' })
     .max(50, { message: 'Informe seu nome.' })
     .regex(/^[a-zA-ZÀ-ÿ]+$/, {message: 'O nome deve ter somente letras.',}),
   email: z
@@ -14,9 +15,11 @@ const contactFormSchema = z.object({
     .email({ message: 'Por favor, insira um e-mail válido.' }),
   subject: z
     .string()
+    .min(5, { message: 'Informe o assunto.' })
     .max(50, { message: 'Informe o assunto.' }),
   message: z
     .string()
+    .min(10, { message: 'Informe sua mensagem.' })
     .max(200, { message: 'Informe sua mensagem.' })
 })
 
@@ -29,6 +32,7 @@ export function Contact() {
 
     return (
         <Container>
+          Estou trabalhando aqui 😅
           <label>
             Nome
             <input
@@ -36,6 +40,7 @@ export function Contact() {
               placeholder="Informe seu nome"
               autoComplete="off"
               {...register('name')}
+              disabled
             />
           </label>
 
@@ -46,6 +51,7 @@ export function Contact() {
               placeholder="Informe seu e-mail"
               autoComplete="off"
               {...register('email')}
+              disabled
             />
           </label>
 
@@ -56,6 +62,7 @@ export function Contact() {
               placeholder="Informe o assunto"
               autoComplete="off"
               {...register('subject')}
+              disabled
             />
           </label>
 
@@ -65,10 +72,11 @@ export function Contact() {
               placeholder="Digite sua mensage"
               autoComplete="off"
               {...register('message')}
+              disabled
             />
           </label>
 
-          <button type='submit'>
+          <button type='submit' disabled>
             <BiMailSend size="25" />
             Enviar
           </button>
