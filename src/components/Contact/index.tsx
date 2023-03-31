@@ -32,6 +32,7 @@ export function Contact() {
 
     return (
         <Container>
+          Estou trabalhando aqui 😅
           <label>
             Nome
             <input
@@ -39,6 +40,7 @@ export function Contact() {
               placeholder="Informe seu nome"
               autoComplete="off"
               {...register('name')}
+              disabled
             />
           </label>
 
@@ -49,6 +51,7 @@ export function Contact() {
               placeholder="Informe seu e-mail"
               autoComplete="off"
               {...register('email')}
+              disabled
             />
           </label>
 
@@ -59,6 +62,7 @@ export function Contact() {
               placeholder="Informe o assunto"
               autoComplete="off"
               {...register('subject')}
+              disabled
             />
           </label>
 
@@ -68,10 +72,11 @@ export function Contact() {
               placeholder="Digite sua mensage"
               autoComplete="off"
               {...register('message')}
+              disabled
             />
           </label>
 
-          <button type='submit'>
+          <button type='submit' disabled>
             <BiMailSend size="25" />
             Enviar
           </button>
