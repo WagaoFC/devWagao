@@ -26,9 +26,15 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>
 
 export function Contact() {
-    const { register } = useForm<ContactFormData>({
+    const { register, watch } = useForm<ContactFormData>({
       resolver: zodResolver(contactFormSchema),
     })
+
+    const name = watch('name')
+    const email = watch('email')
+    const subject = watch('subject')
+    const message = watch('message')
+    const isSubmitDisabled = name && email && subject && message
 
     return (
         <Container>
@@ -40,7 +46,6 @@ export function Contact() {
               placeholder="Informe seu nome"
               autoComplete="off"
               {...register('name')}
-              disabled
             />
           </label>
 
@@ -51,7 +56,6 @@ export function Contact() {
               placeholder="Informe seu e-mail"
               autoComplete="off"
               {...register('email')}
-              disabled
             />
           </label>
 
@@ -62,7 +66,6 @@ export function Contact() {
               placeholder="Informe o assunto"
               autoComplete="off"
               {...register('subject')}
-              disabled
             />
           </label>
 
@@ -72,11 +75,14 @@ export function Contact() {
               placeholder="Digite sua mensage"
               autoComplete="off"
               {...register('message')}
-              disabled
             />
           </label>
 
-          <button type='submit' disabled>
+          <button 
+            type='submit'
+            disabled={!isSubmitDisabled}
+            title={!isSubmitDisabled ? 'Preencha todos os campos para enviar' : ''}
+          >
             <BiMailSend size="25" />
             Enviar
           </button>
