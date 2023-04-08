@@ -2,8 +2,11 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { motion } from 'framer-motion'
+import sgMail from '@sendgrid/mail'
 import { Container } from "./styled"
 import { BiMailSend } from 'react-icons/bi'
+
+sgMail.setApiKey(import.meta.env.VITE_API_KEY)
 
 const contactFormSchema = z.object({
   name: z
@@ -40,7 +43,22 @@ export function Contact() {
     const isSubmitDisabled = name && email && subject && message
 
     function sendForm (data: ContactFormData) {
-      console.log(data)
+
+      const msg = {
+        to: 'wagnerferreira_07@hotmail.com',
+        from: data.email,
+        subject: data.subject,
+        text: data.message,
+        html: data.name,
+      }
+
+      sgMail.send(msg)
+        .then(() => {
+          console.log('E-mail enviado com sucesso!');
+        })
+        .catch((error) => {
+          console.error(error);
+        })
     }
 
     return (
