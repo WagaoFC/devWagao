@@ -39,7 +39,7 @@ export function Contact() {
     const message = watch('message')
     const isSubmitDisabled = name && email && subject && message
 
-    function sendForm (data: any) {
+    function sendForm (data: ContactFormData) {
       console.log(data)
     }
 
