@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { motion } from 'framer-motion'
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com'
 import { Container } from "./styled"
 import { BiMailSend } from 'react-icons/bi'
 
@@ -40,14 +41,24 @@ export function Contact() {
     const isSubmitDisabled = name && email && subject && message
 
     function sendForm (data: ContactFormData) {
-
       const msg = {
-        to: 'wagnerferreira_07@hotmail.com',
-        from: data.email,
+        from_name: data.name,
+        from_email: data.email,
+        message: data.message,
         subject: data.subject,
-        text: data.message,
-        html: data.name,
       }
+
+      emailjs.send(
+        import.meta.env.VITE_YOUR_SERVICE_ID,
+        import.meta.env.VITE_YOUR_TEMPLATE_ID,
+        msg,
+        import.meta.env.VITE_YOUR_PUBLIC_KEY,
+      )
+      .then((response: EmailJSResponseStatus) => {
+        console.log('Email enviado com sucesso!', response.status, response.text);
+      }, (error) => {
+          console.error('Ocorreu um erro ao enviar o email:', error);
+        })
     }
 
     return (
