@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -29,6 +30,8 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>
 
 export function Contact() {
+    const [loader, setLoader] = useState(false)
+
     const { register, watch, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>({
       resolver: zodResolver(contactFormSchema),
     })
@@ -54,16 +57,24 @@ export function Contact() {
         import.meta.env.VITE_YOUR_PUBLIC_KEY,
       )
       .then((response: EmailJSResponseStatus) => {
-        reset()
         console.log('Email enviado com sucesso!', response.status, response.text);
+        reset()
       }, (error) => {
           console.error('Ocorreu um erro ao enviar o email:', error);
-        })
+        }
+      )
     }
 
     return (
         <Container onSubmit={handleSubmit(sendForm)}>
-          Estou trabalhando aqui 😅
+
+          {loader &&
+            <div>
+              <span className="loader" />
+              <span>Enviado sua mensagem...</span>
+            </div>
+          }
+
           <label>
             Nome
             <input
@@ -141,6 +152,7 @@ export function Contact() {
 
           <button 
             type='submit'
+            onClick={() => setLoader(true)}
             disabled={!isSubmitDisabled}
             title={!isSubmitDisabled ? 'Preencha todos os campos para enviar' : ''}
           >
