@@ -9,8 +9,7 @@ import { BiMailSend } from 'react-icons/bi'
 const contactFormSchema = z.object({
   name: z
     .string()
-    .nonempty('É obrigatório informar seu nome.')
-    .regex(/^[a-zA-ZÀ-ÿ]+$/, {message: 'O nome deve ter somente letras.',}),
+    .nonempty('É obrigatório informar seu nome.'),
   email: z
     .string()
     .nonempty('É obrigatório informar seu e-mail.')
@@ -30,7 +29,7 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>
 
 export function Contact() {
-    const { register, watch, handleSubmit, formState: { errors } } = useForm<ContactFormData>({
+    const { register, watch, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>({
       resolver: zodResolver(contactFormSchema),
     })
 
@@ -55,6 +54,7 @@ export function Contact() {
         import.meta.env.VITE_YOUR_PUBLIC_KEY,
       )
       .then((response: EmailJSResponseStatus) => {
+        reset()
         console.log('Email enviado com sucesso!', response.status, response.text);
       }, (error) => {
           console.error('Ocorreu um erro ao enviar o email:', error);
