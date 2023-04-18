@@ -75,55 +75,64 @@ export const Container = styled.form`
         svg {
             margin: 0;
         }
-    }
-    
-    div {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1rem;
+        }
     }
 
     .loader {
-        border-style: solid;
-        box-sizing: border-box;
-        border-width: 40px 60px 30px 60px;
-        border-color: #3760C9 #96DDFC #96DDFC #36BBF7;
-        animation: envFloating 1s ease-in infinite alternate;
+        color: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
+        font-size: 1rem;
+        text-indent: -9999em;
+        overflow: hidden;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        position: relative;
+        transform: translateZ(0);
+        animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
     }
 
-    .loader:after{
-        content:"";
-        position: absolute;
-        right: 62px;
-        top: -40px;
-        height: 70px;
-        width: 50px;
-        background-image:
-                    linear-gradient(#fff 45px, transparent 0),
-                    linear-gradient(#fff 45px, transparent 0),
-                    linear-gradient(#fff 45px, transparent 0);
-        background-repeat: no-repeat;
-        background-size: 30px 4px;
-        background-position: 0px 11px , 8px 35px, 0px 60px;
-        animation: envDropping 0.75s linear infinite;
+    @keyframes mltShdSpin {
+        0% {
+            box-shadow: 0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+        5%,
+        95% {
+            box-shadow: 0 -0.83em 0 -0.4em, 
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+        10%,
+        59% {
+            box-shadow: 0 -0.83em 0 -0.4em, 
+            -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+            -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+        }
+        20% {
+            box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+            -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+            -0.749em -0.34em 0 -0.477em;
+        }
+        38% {
+            box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+            -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+            -0.82em -0.09em 0 -0.477em;
+        }
+        100% {
+            box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+            0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
     }
 
-    @keyframes envFloating {
-        0% { transform: translate(-2px, -5px)}
-        100% { transform: translate(0, 5px)}
-    }
-
-    @keyframes envDropping {
-        0% {background-position: 100px 11px , 115px 35px, 105px 60px; opacity: 1;}
-        50% {background-position: 0px 11px , 20px 35px, 5px 60px; }
-        60% {background-position: -30px 11px , 0px 35px, -10px 60px; }
-        75%, 100% {background-position: -30px 11px , -30px 35px, -30px 60px; opacity: 0;}
+    @keyframes round {
+        0% { transform: rotate(0deg) }
+        100% { transform: rotate(360deg) }
     }
 `

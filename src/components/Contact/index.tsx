@@ -57,24 +57,18 @@ export function Contact() {
         import.meta.env.VITE_YOUR_PUBLIC_KEY,
       )
       .then((response: EmailJSResponseStatus) => {
-        console.log('Email enviado com sucesso!', response.status, response.text);
+        console.log('Email enviado com sucesso!', response.status, response.text)
+        setLoader(false)
         reset()
       }, (error) => {
-          console.error('Ocorreu um erro ao enviar o email:', error);
+          console.error('Ocorreu um erro ao enviar o email:', error)
+          setLoader(false)
         }
       )
     }
 
     return (
         <Container onSubmit={handleSubmit(sendForm)}>
-
-          {loader &&
-            <div>
-              <span className="loader" />
-              <span>Enviado sua mensagem...</span>
-            </div>
-          }
-
           <label>
             Nome
             <input
@@ -156,8 +150,17 @@ export function Contact() {
             disabled={!isSubmitDisabled}
             title={!isSubmitDisabled ? 'Preencha todos os campos para enviar' : ''}
           >
-            <BiMailSend size="25" />
-            Enviar
+          {loader ? 
+            <div>
+              <span className="loader" />
+              Aguarde
+            </div>
+            :
+            <div>
+              <BiMailSend size="25" />
+              Enviar
+            </div>
+          }
           </button>
         </Container>
     )
