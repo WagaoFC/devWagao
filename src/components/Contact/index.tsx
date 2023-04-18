@@ -33,7 +33,7 @@ export function Contact() {
     const [loader, setLoader] = useState(false)
     const [countText, setCountText] = useState('')
 
-    const { register, watch, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>({
+    const { register, watch, handleSubmit, formState: { errors }, reset, setValue } = useForm<ContactFormData>({
       resolver: zodResolver(contactFormSchema),
     })
 
@@ -42,7 +42,7 @@ export function Contact() {
     const subject = watch('subject')
     const message = watch('message')
     const isSubmitDisabled = name && email && subject && message
-
+    
     function sendForm (data: ContactFormData) {
       const msg = {
         from_name: data.name,
@@ -69,6 +69,9 @@ export function Contact() {
     }
 
     function handleTextareaChange(event: any) {
+      const value = event.target.value
+      
+      setValue('message', value)
       setCountText(event.target.value)
     }
 
