@@ -31,6 +31,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>
 
 export function Contact() {
     const [loader, setLoader] = useState(false)
+    const [countText, setCountText] = useState('')
 
     const { register, watch, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>({
       resolver: zodResolver(contactFormSchema),
@@ -65,6 +66,10 @@ export function Contact() {
           setLoader(false)
         }
       )
+    }
+
+    function handleTextareaChange(event: any) {
+      setCountText(event.target.value)
     }
 
     return (
@@ -132,7 +137,9 @@ export function Contact() {
               placeholder="Digite sua mensage"
               autoComplete="off"
               {...register('message')}
+              onChange={handleTextareaChange}
             />
+            <p>{countText.length}/200</p>
             {errors.message && 
               <motion.div 
                 initial={{ y: "100%" }}

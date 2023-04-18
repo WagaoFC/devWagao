@@ -18,6 +18,12 @@ export const Container = styled.form`
             color: red;
         }
 
+        p {
+            font-size: 0.81rem;
+            text-align: right;
+            margin-top: 2px;
+        }
+
         input {
             border-radius: 5px;
             border: solid 2px ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
@@ -26,7 +32,7 @@ export const Container = styled.form`
             color: ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
             
             ::placeholder {
-                ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
+                color: ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
             }
 
             :focus {
@@ -36,6 +42,7 @@ export const Container = styled.form`
 
         textarea {
             max-width: 500px;
+            min-height: 100px;
             border-radius: 5px;
             border: solid 2px ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
             padding: 0.625rem;
@@ -43,7 +50,7 @@ export const Container = styled.form`
             color: ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
             
             ::placeholder {
-                ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
+                color: ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
             }
 
             :focus {
@@ -64,7 +71,6 @@ export const Container = styled.form`
         color: ${props => props.theme.title === 'light' ? 'var(--text-color-light)' : 'var(--text-color-dark)'};
         box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
         transition: color 0.1s, background-color 0.3s;
-        margin-top: 1rem;
         
         &:hover {
             background-color: ${props => props.theme.title === 'light' ? 'var(--background-light)' : 'var(--background-dark)'};
