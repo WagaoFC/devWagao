@@ -8,6 +8,10 @@ export const Container = styled.form`
     gap: 1rem;
     width: 500px;
 
+    > div {
+        margin-top: 2rem;
+    }
+
     label {
         display: flex;
         flex-direction: column;
