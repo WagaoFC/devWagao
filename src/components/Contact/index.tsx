@@ -31,6 +31,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>
 
 export function Contact() {
     const [loader, setLoader] = useState(false)
+    const [statusCodeSendEmail, setStatusCodeSendEmail] = useState(0)
     const [countText, setCountText] = useState('')
 
     const { register, watch, handleSubmit, formState: { errors }, reset, setValue } = useForm<ContactFormData>({
@@ -58,11 +59,12 @@ export function Contact() {
         import.meta.env.VITE_YOUR_PUBLIC_KEY,
       )
       .then((response: EmailJSResponseStatus) => {
-        console.log('Email enviado com sucesso!', response.status, response.text)
         setLoader(false)
+        setStatusCodeSendEmail(response.status)
         reset()
       }, (error) => {
-          console.error('Ocorreu um erro ao enviar o email:', error)
+          console.error('error', error)
+          setStatusCodeSendEmail(404)
           setLoader(false)
         }
       )
@@ -77,6 +79,17 @@ export function Contact() {
 
     return (
         <Container onSubmit={handleSubmit(sendForm)}>
+          {statusCodeSendEmail !== 0 &&
+            <motion.div 
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ type: "spring", stiffness: 120 }}
+            >
+              <span>
+                {statusCodeSendEmail === 200 ? 'Mensagem enviada com sucesso 🚀' : 'Algo deu errado aqui, tente novamente.'}
+              </span>
+            </ motion.div>
+          }
           <label>
             Nome
             <input
