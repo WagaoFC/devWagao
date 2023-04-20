@@ -169,7 +169,7 @@ export function Contact() {
 
           <button 
             type='submit'
-            onClick={() => setLoader(true)}
+            onClick={() => setLoader(Object.keys(errors).length === 0 ? true : false)}
             disabled={!isSubmitDisabled}
             title={!isSubmitDisabled ? 'Preencha todos os campos para enviar' : ''}
           >
