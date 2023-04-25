@@ -9,6 +9,7 @@ import { ScrollTop } from '../ScrollTop'
 import { About } from '../About'
 import { Skills } from '../Skills'
 import { Contact } from '../Contact'
+import { Portfolio } from '../Portfolio'
 
 export function Main() {
     const defaultOptions = {
@@ -53,7 +54,8 @@ export function Main() {
                 <section id="skills">
                     <Skills />
                 </section>
-                <section id="portfolio">Estou trabalhando aqui 😅
+                <section id="portfolio">
+                    <Portfolio />
                     <Lottie
                         options={defaultOptionsConstruction}
                         height={600}

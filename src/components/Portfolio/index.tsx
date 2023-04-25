@@ -2,6 +2,8 @@ import { Container } from "./styled";
 
 export function Portfolio() {
     return (
-        <Container />
+        <Container>
+            Estou trabalhando aqui 😅
+        </ Container>
     )
 }
