@@ -35,7 +35,7 @@ export function Main() {
                 <Text>
                     <h1>Olá 👋, me chamo Wagner</h1>
                     <Typist cursor={{ show: false }}>
-                        <h2>Sou Software Developer na <a href="https://www.zema.com/" target="_blank">Zema</a></h2>
+                        <h2>Sou Front-end Developer na <a href="https://br.linkedin.com/company/bittecnologia" target="_blank">Bit Tech</a></h2>
                     </Typist>
                     <h3>Atualmente vivo o maior desafio da minha vida,<br/> ser um ótimo desenvolvedor.</h3>
                 </Text>
