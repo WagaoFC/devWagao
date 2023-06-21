@@ -1,7 +1,7 @@
-import { FaPeopleCarry, FaUserAstronaut, FaBoxes} from 'react-icons/fa'
+import { FaPeopleCarry, FaUserAstronaut, FaBoxes, FaLightbulb} from 'react-icons/fa'
 import { GiTalk, GiChameleonGlyph } from 'react-icons/gi'
 import { RiEmotionFill } from 'react-icons/ri'
-import { MdOutlineSchedule } from 'react-icons/md'
+import { MdOutlineSchedule, MdFilterCenterFocus } from 'react-icons/md'
 import { motion } from 'framer-motion'
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
@@ -71,6 +71,24 @@ export function SoftSkillsCard() {
                 >
                     <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Pontual">
                         <MdOutlineSchedule />
+                    </Cards>
+                </ motion.div>
+                <motion.div 
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ type: "spring", stiffness: 80 }}
+                >
+                    <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Criatividade">
+                        <FaLightbulb />
+                    </Cards>
+                </ motion.div>
+                <motion.div 
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ type: "spring", stiffness: 80 }}
+                >
+                    <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Foco">
+                        <MdFilterCenterFocus />
                     </Cards>
                 </ motion.div>
 
