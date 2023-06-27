@@ -58,5 +58,6 @@ export const Text = styled.div`
         width: 400px;
         display: flex;
         flex-direction: column;
+        margin: 0 20px;
     }
 `
