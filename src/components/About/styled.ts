@@ -16,6 +16,25 @@ export const Container = styled.div`
             transform: scale(1.2);
         }
     }
+
+    .img1 {
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+
+    .img2 {
+        display: none;
+        border-radius: 50%;
+
+        @media (max-width: 700px) {
+            display: block;
+        }
+    }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 `
 
 export const Text = styled.div`
@@ -33,5 +52,11 @@ export const Text = styled.div`
         display: flex;
         text-align: justify;
         margin-bottom: 1rem;
+    }
+
+    @media (max-width: 700px) {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
     }
 `

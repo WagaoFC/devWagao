@@ -1,4 +1,5 @@
 import wagaoSerious from '../../assets/images/wagaoSerious.jpg'
+import wagaoGitHub from '../../assets/images/wagaoGitHub.png'
 import { Container, Text } from './styled'
 
 export function About() {
@@ -6,6 +7,8 @@ export function About() {
         <Container>
             <Text>
                 <h1>Um pouco sobre mim</h1>
+                <br />
+                <img className='img2' src={wagaoGitHub} alt="Foto de Wagner" />
                 <br />
                 <span>
                     Também sou conhecido como Wagão. Sou mineiro e tenho 28 anos.
@@ -31,7 +34,7 @@ export function About() {
                     </strong>.
                 </span>
             </Text>
-            <img src={wagaoSerious} alt="Foto de Wagner" />
+            <img className='img1' src={wagaoSerious} alt="Foto de Wagner" />
         </ Container>
     )
 }

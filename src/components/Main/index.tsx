@@ -54,14 +54,14 @@ export function Main() {
                 <section id="skills">
                     <Skills />
                 </section>
-                <section id="portfolio">
+                {/* <section id="portfolio">
                     <Portfolio />
                     <Lottie
                         options={defaultOptionsConstruction}
                         height={600}
                         width={600}
                     />
-                </section>
+                </section> */}
                 <section id="contact">
                     <Contact />
                 </section>

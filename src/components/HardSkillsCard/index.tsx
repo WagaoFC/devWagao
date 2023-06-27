@@ -10,7 +10,8 @@ import {
     SiGit, 
     SiGithub,
     SiVisualstudiocode,
-    SiCsharp
+    SiCsharp,
+    SiAngular
 } from 'react-icons/si'
 import { motion } from 'framer-motion'
 import { Tooltip } from 'react-tooltip'
@@ -52,6 +53,15 @@ export function HardSkillsCard() {
                     animate={{ y: 0 }}
                     transition={{ type: "spring", stiffness: 90 }}
                 >
+                    <Cards data-tooltip-id="my-tooltip" data-tooltip-content="TypeScript">
+                        <SiTypescript />
+                    </Cards>
+                </ motion.div>
+                <motion.div 
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ type: "spring", stiffness: 80 }}
+                >
                     <Cards data-tooltip-id="my-tooltip" data-tooltip-content="ReactJS">
                         <SiReact />
                     </Cards>
@@ -61,14 +71,14 @@ export function HardSkillsCard() {
                     animate={{ y: 0 }}
                     transition={{ type: "spring", stiffness: 80 }}
                 >
-                    <Cards data-tooltip-id="my-tooltip" data-tooltip-content="TypeScript">
-                        <SiTypescript />
+                    <Cards data-tooltip-id="my-tooltip" data-tooltip-content="Angular">
+                        <SiAngular />
                     </Cards>
                 </ motion.div>
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 70 }}
+                    transition={{ type: "spring", stiffness: 80 }}
                 >
                     <Cards data-tooltip-id="my-tooltip" data-tooltip-content="Styled Components">
                         <SiStyledcomponents />
@@ -77,16 +87,16 @@ export function HardSkillsCard() {
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 120 }}
+                    transition={{ type: "spring", stiffness: 80 }}
                 >
-                    <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="C#">
+                    <Cards data-tooltip-id="my-tooltip" data-tooltip-content="C#">
                         <SiCsharp />
                     </Cards>
                 </ motion.div>
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 110 }}
+                    transition={{ type: "spring", stiffness: 120 }}
                 >
                     <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Node.js">
                         <SiNodedotjs />
@@ -95,7 +105,7 @@ export function HardSkillsCard() {
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 100 }}
+                    transition={{ type: "spring", stiffness: 110 }}
                 >
                     <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="SQL Server">
                         <SiMicrosoftsqlserver />
@@ -104,7 +114,7 @@ export function HardSkillsCard() {
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 90 }}
+                    transition={{ type: "spring", stiffness: 100 }}
                 >
                     <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Git">
                         <SiGit />
@@ -113,7 +123,7 @@ export function HardSkillsCard() {
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 80 }}
+                    transition={{ type: "spring", stiffness: 90 }}
                 >
                     <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="GitHub">
                         <SiGithub />
@@ -122,7 +132,7 @@ export function HardSkillsCard() {
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 70 }}
+                    transition={{ type: "spring", stiffness: 80 }}
                 >
                     <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Visual Studio Code">
                         <SiVisualstudiocode />

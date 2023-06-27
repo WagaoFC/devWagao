@@ -14,8 +14,10 @@ export const Container = styled.main`
     }
 
     @media (max-width: 500px) {
-        width: 600px;
-        margin-left: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
 `
 
@@ -33,6 +35,11 @@ export const Icons = styled.div`
             color: var(--text-color-focus);
         }
     }
+
+    @media (max-width: 500px) {
+        flex-direction: row;
+        margin: 0;
+    }
 `
 
 export const Text = styled.div`
@@ -48,6 +55,10 @@ export const Text = styled.div`
     a {
         text-decoration: none;
         color: var(--text-color-focus);
+    }
+
+    @media (max-width: 500px) {
+        text-align: center;
     }
 `
 
@@ -71,7 +82,7 @@ export const Section = styled.section`
         margin: auto;
     }
 
-    svg {
+    > svg {
         margin: 0 0 0 5rem;
 
         @media (max-width: 700px) {
@@ -81,10 +92,8 @@ export const Section = styled.section`
 
     @media (max-width: 700px) {
         display: flex;
-        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 65vh;
     }
 
     footer {

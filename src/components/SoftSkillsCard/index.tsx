@@ -1,5 +1,5 @@
 import { FaPeopleCarry, FaUserAstronaut, FaBoxes, FaLightbulb} from 'react-icons/fa'
-import { GiTalk, GiChameleonGlyph } from 'react-icons/gi'
+import { GiTalk, GiChameleonGlyph, GiSmart } from 'react-icons/gi'
 import { RiEmotionFill } from 'react-icons/ri'
 import { MdOutlineSchedule, MdFilterCenterFocus } from 'react-icons/md'
 import { motion } from 'framer-motion'
@@ -85,10 +85,19 @@ export function SoftSkillsCard() {
                 <motion.div 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ type: "spring", stiffness: 80 }}
+                    transition={{ type: "spring", stiffness: 120 }}
                 >
                     <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Foco">
                         <MdFilterCenterFocus />
+                    </Cards>
+                </ motion.div>
+                <motion.div 
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ type: "spring", stiffness: 110 }}
+                >
+                    <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Cabeça de dono">
+                        <GiSmart />
                     </Cards>
                 </ motion.div>
 
