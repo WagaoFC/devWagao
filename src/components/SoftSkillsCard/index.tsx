@@ -69,7 +69,7 @@ export function SoftSkillsCard() {
                     animate={{ y: 0 }}
                     transition={{ type: "spring", stiffness: 80 }}
                 >
-                    <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Pontual">
+                    <Cards data-tooltip-id="my-tooltip" data-tooltip-content="Pontual">
                         <MdOutlineSchedule />
                     </Cards>
                 </ motion.div>
@@ -78,7 +78,7 @@ export function SoftSkillsCard() {
                     animate={{ y: 0 }}
                     transition={{ type: "spring", stiffness: 80 }}
                 >
-                    <Cards data-tooltip-id="my-tooltip-bottom" data-tooltip-content="Criatividade">
+                    <Cards data-tooltip-id="my-tooltip" data-tooltip-content="Criatividade">
                         <FaLightbulb />
                     </Cards>
                 </ motion.div>

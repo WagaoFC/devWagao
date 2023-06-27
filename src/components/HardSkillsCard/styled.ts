@@ -1,18 +1,23 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    /* display: grid;
-    grid-template-columns: repeat(6, 1fr); */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     column-gap: 2rem;
+    min-width: 500px;
     
     .customTooltip {
         color: ${props => props.theme.title === 'light' ? 'var(--text-color-light)' : 'var(--text-color-dark)'};
         background-color: ${props => props.theme.title === 'light' ? 'var(--background-dark)' : 'var(--background-light)'};
+    }
+
+    @media (max-width: 500px) {
+        height: 350px;
+        flex-direction: column;
+        overflow: scroll;
     }
 `
 
