@@ -8,6 +8,11 @@ export const Container = styled.form`
     gap: 1rem;
     width: 500px;
 
+    @media (max-width: 500px) {
+        width: 400px;
+        margin: 0 20px;
+    }
+
     > div {
         margin-top: 2rem;
     }

@@ -18,6 +18,7 @@ export const Container = styled.main`
         flex-wrap: wrap;
         flex-direction: column-reverse;
         justify-content: center;
+        width: 400px;
     }
 `
 

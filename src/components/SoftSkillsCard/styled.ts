@@ -7,7 +7,8 @@ export const Container = styled.div`
     justify-content: center;
     flex-direction: row;
     column-gap: 2rem;
-    min-width: 500px;
+    min-width: 400px;
+    margin: 0 20px;
     
     .customTooltip {
         color: ${props => props.theme.title === 'light' ? 'var(--text-color-light)' : 'var(--text-color-dark)'};

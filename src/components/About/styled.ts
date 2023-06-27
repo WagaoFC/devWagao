@@ -55,7 +55,7 @@ export const Text = styled.div`
     }
 
     @media (max-width: 700px) {
-        width: 80%;
+        width: 400px;
         display: flex;
         flex-direction: column;
     }

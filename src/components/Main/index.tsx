@@ -56,11 +56,11 @@ export function Main() {
                 </section>
                 <section id="portfolio">
                     <Portfolio />
-                    <Lottie
+                    {/* <Lottie
                         options={defaultOptionsConstruction}
                         height={600}
                         width={600}
-                    />
+                    /> */}
                 </section>
                 <section id="contact">
                     <Contact />
